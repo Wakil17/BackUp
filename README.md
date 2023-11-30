@@ -1,7 +1,13 @@
-Ce projet a été mis en place pour faire une sauvegarde des données utilisateurs des dossiers non partagés des postes utilisateur dans une clef USB. 
+Ce projet a été mis en place pour effectuer une sauvegarde des données utilisateur des dossiers non partagés des postes utilisateurs sur une clé USB.
 
-Ne pas oublier de changer les chemins. 
+N'oubliez pas de modifier les chemins.
 
-Y'en a un qui marche mais je sais plus lequel. 
+Il y en a un qui fonctionne, mais je ne me souviens plus lequel.
 
-Peut être que si j'avais utilisée git pour ce projet j'aurais pu garder un meilleur historique des modifications. 
+Peut-être que si j'avais utilisé Git pour ce projet, j'aurais pu conserver un meilleur historique des modifications.
+
+Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la ligne de commande ci-dessous dans votre terminal, en l'adaptant à votre arborescence :
+
+```
+C:/Python/Python311/python.exe "C:/Python/Python311/Projet Backup/hello.py"
+```
