@@ -1,12 +1,12 @@
 Ce projet a été mis en place pour effectuer une sauvegarde des données utilisateur des dossiers non partagés des postes utilisateurs sur une clé USB.
 
-N'oubliez pas de modifier les chemins.
+N'oubliez pas de modifier le chemin de la variable script_path à la ligne 55 du scrpit pour que le code puisse s'executer avec les droits administrateurs et créer/déplacer des dossiers/fichiers.
 
-Il y en a un qui fonctionne, mais je ne me souviens plus lequel.
+Le script fonctionnel.py est executable. 
 
-Peut-être que si j'avais utilisé Git pour ce projet, j'aurais pu conserver un meilleur historique des modifications.
+Libre à vous d'ajouter des améliorations et de remonter résoudre les bugs rencontrés. 
 
-Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la ligne de commande ci-dessous dans votre terminal, en l'adaptant à votre arborescence :
+Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la ligne de commande ci-dessous dans votre terminal en l'adaptant le chemin à votre arborescence :
 
 ```
 c:/Python/Python311/python.exe "c:/Python/Python311/Projet Backup/fonctionnel.py"
