@@ -49,7 +49,7 @@ destinations.append('C:\\' + username + '_BackUp\\Favoris_' + username + '_Backu
 
 # Chemin Téléchargements
 sources.append('C:\\Users\\' + username + '\\Downloads\\')
-destinations.append('D:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
+destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
 # Exécutez le script en tant qu'administrateur avec subprocess
 script_path = "c:/Python/Python311/Projet Backup/fonctionnel.py"
