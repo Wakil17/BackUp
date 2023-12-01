@@ -10,9 +10,9 @@ Le script backup.py est le script à executer en premier il copie les données d
 
 Pour le dévelopement:
  * les dossiers sont copié dans un dossier à la racine de C nommé *username_backup*. 
- * A la ligne 9 ```for i in range(len(sources) - 1):``` le -1 sert à ne pas prendre en compte le dernier élément de la liste pour éviter pour copier tout le dossier téléchargement. 
+ * A la ligne 9 ```for i in range(len(sources) - 1)```: le -1 sert à ne pas prendre en compte le dernier élément de la liste pour éviter pour copier tout le dossier téléchargement. 
 
-**Vous pouvez modifier les chemins destinations pour vos tests en local mais lors d'une PR sur la branche principale il faudra que les chemins soient identique à ceux de la branche main pour faciliter la prise en main des autres collaborateurs. Merci:).**  
+**Vous pouvez modifier les chemins destinations pour vos tests en local mais lors d'une PR sur la branche principale il faudra que les chemins soient identique à ceux de la branche main pour faciliter la prise en main des autres collaborateurs. Merci :) .**  
 
 Le script restoreBackup.py sert à copier les données de la clef vers les bons dossiers du nouveau poste.
 
@@ -29,7 +29,7 @@ Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la li
 ```
 c:/Python/Python311/python.exe "c:/Python/Python311/Projet Backup/backup.py"
 ```
-### Nouvel fonctionnalité 
+### Nouvelle fonctionnalitée
 
 Ajout d'une barre de progression lors du chargement des fichiers
-Assurez-vous de l'installer en utilisant *pip install tqdm* si vous ne l'avez pas déjà fait. 
+Pour qu'elle soit fonctionnelle assurez-vous d'installer tqdm en utilisant la commande ```pip install tqdm```. 
