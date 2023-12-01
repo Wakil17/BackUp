@@ -6,6 +6,7 @@ import subprocess
 import sys
 from tqdm import tqdm
 
+
 def start():
     for i in range(len(sources) - 1):
         copy_folder(sources[i], destinations[i])
