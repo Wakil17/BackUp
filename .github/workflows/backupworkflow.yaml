@@ -1,0 +1,27 @@
+name: Python Check
+
+on:
+  pull_request:
+    branches:
+      - main  # Remplacez "main" par le nom de votre branche principale si nécessaire
+
+jobs:
+  check-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Spécifiez la version de Python que vous utilisez
+
+    - name: Check Python code
+      uses: github/codeql-action/init@v1
+
+    - name: Run Python linting (adjust as needed)
+      run: |
+        pip install pylint
+        pylint . 
