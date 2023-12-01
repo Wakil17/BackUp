@@ -25,5 +25,9 @@ N'oubliez pas de modifier le chemin de la variable script_path à la ligne 55 du
 Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la ligne de commande ci-dessous dans votre terminal en l'adaptant le chemin à votre arborescence :
 
 ```
-c:/Python/Python311/python.exe "c:/Python/Python311/Projet Backup/fonctionnel.py"
+c:/Python/Python311/python.exe "c:/Python/Python311/Projet Backup/backup.py"
 ```
+### Nouvel fonctionnalité 
+
+Ajout d'une barre de progression lors du chargement des fichiers
+Assurez-vous de l'installer en utilisant *pip install tqdm* si vous ne l'avez pas déjà fait. 
