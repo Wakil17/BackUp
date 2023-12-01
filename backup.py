@@ -6,8 +6,7 @@ import subprocess
 import sys
 from tqdm import tqdm
 
-
-##Test des Tests
+##Test des Tests workflow
 
 def start():
     for i in range(len(sources) - 1):
