@@ -35,4 +35,4 @@ Ajout d'une barre de progression lors du chargement des fichiers
 Pour qu'elle soit fonctionnelle assurez-vous d'installer tqdm en utilisant la commande suivante: 
 ```
 pip install tqdm
-```. 
+``` 
