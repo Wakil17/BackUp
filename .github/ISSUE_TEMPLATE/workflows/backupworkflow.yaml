@@ -1,12 +1,12 @@
-name: Run Tests
+name: Python Check
 
-on: 
+on:
   pull_request:
     branches:
-      -main
+      - main  # Remplacez "main" par le nom de votre branche principale si nécessaire
 
 jobs:
-  build:
+  check-python:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,13 +16,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.x  # Spécifiez la version de Python que vous utilisez
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+    - name: Check Python code
+      uses: github/codeql-action/init@v1
 
-    - name: Run tests
+    - name: Run Python linting (adjust as needed)
       run: |
-        python -m unittest tests/test_backup.py
+        pip install pylint
+        pylint . 
