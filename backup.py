@@ -52,7 +52,7 @@ sources.append('C:\\Users\\' + username + '\\Downloads\\')
 destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
 # Exécutez le script en tant qu'administrateur avec subprocess
-script_path = "c:/Python/Python311/Projet Backup/fonctionnel.py"
+script_path = "c:/Python/Python311/Projet Backup/backup.py"
 subprocess.run(["runas", "/user:Administrator", sys.executable, script_path])
 
 # Lancez la copie des dossiers si l'exécution ci-dessus est en mode administrateur

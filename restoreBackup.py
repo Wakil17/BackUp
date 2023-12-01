@@ -1,35 +1,15 @@
 import shutil
 import getpass
 import os
-import sys
 import ctypes
-import tkinter as tk
 import subprocess
-
+import sys
 
 def start():
-
-    # Appel de la fonction pour copier le dossier
-    if not ctypes.windll.shell32.IsUserAnAdmin():
-        ctypes.windll.shell32.ShellExecuteW(None, 'runas', sys.executable, "c:/Python/Python311/get-pip.py", None, 1)
-    else:
-    #for i in range(len(sources)):
-        #copy_folder(sources[i], destinations[i])
-
-        for i in range(len(sources)):
-            copy_folder(destinations[i], sources[i])
-
-
-# Créer la fenêtre principale
-fenetre = tk.Tk()
-fenetre.title("Interface de lancement")
-
-# Créer un bouton pour lancer le script
-bouton_lancer = tk.Button(fenetre, text="Lancer le script", command=start)
-bouton_lancer.pack(padx=20, pady=20)
+    for i in range(len(sources) - 1):
+        copy_folder(sources[i], destinations[i])
 
 def copy_folder(source_folder, destination_folder):
-
     try:
         # Créez le dossier de destination
         if not os.path.exists(destination_folder):
@@ -42,38 +22,38 @@ def copy_folder(source_folder, destination_folder):
     except Exception as e:
         print("Une erreur s'est produite lors de la copie du dossier :", str(e))
 
-
 # Spécifiez les chemins complets des dossiers source et de destination
 username = getpass.getuser()
 sources = []
 destinations = []
 
-#Chemins Documents
+# Chemins Documents
 sources.append('C:\\Users\\' + username + '\\Documents\\')
-destinations.append('D:\\' + username + '_BackUp\\Documents_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Documents_' + username + '_Baaackup')
 
-
-#Chemin Images
+# Chemin Images
 sources.append('C:\\Users\\' + username + '\\Pictures\\')
-destinations.append('D:\\' + username + '_BackUp\\Images_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Images_' + username + '_Backup')
 
-
-#Chemin Vidéos
+# Chemin Vidéos
 sources.append('C:\\Users\\' + username + '\\Videos\\')
-destinations.append('D:\\' + username + '_BackUp\\Vidéos_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Vidéos_' + username + '_Backup')
 
-#Chemin Musique
+# Chemin Musique
 sources.append('C:\\Users\\' + username + '\\Music\\')
-destinations.append('D:\\' + username + '_BackUp\\Musique_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Musique_' + username + '_Backup')
 
-#Chemins Favoris
+# Chemins Favoris
 sources.append('C:\\Users\\' + username + '\\Favorites\\')
-destinations.append('D:\\' + username + '_BackUp\\Favoris_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Favoris_' + username + '_Backup')
 
-#Chemin Téléchargements
+# Chemin Téléchargements
 sources.append('C:\\Users\\' + username + '\\Downloads\\')
-destinations.append('D:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup\\')
+destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
+# Exécutez le script en tant qu'administrateur avec subprocess
+script_path = "c:/Python/Python311/Projet Backup/fonctionnel.py"
+subprocess.run(["runas", "/user:Administrator", sys.executable, script_path])
 
-
-fenetre.mainloop()
+# Lancez la copie des dossiers si l'exécution ci-dessus est en mode administrateur
+start()
