@@ -1,4 +1,4 @@
-Ce projet a été mis en place pour effectuer une sauvegarde des données utilisateur des dossiers non partagés des postes utilisateurs sur une clé USB.
+Ce projet a été mis en place pour effectuer une sauvegarde des données utilisateur des dossiers non partagés des postes utilisateurs sur une clé USB afin de les restorer sur un autre poste. 
 
 N'oubliez pas de modifier le chemin de la variable script_path à la ligne 55 du scrpit pour que le code puisse s'executer avec les droits administrateurs et créer/déplacer des dossiers/fichiers.
 
