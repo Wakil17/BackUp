@@ -4,6 +4,7 @@ import os
 import ctypes
 import subprocess
 import sys
+from tqdm import tqdm
 
 def start():
     for i in range(len(sources) - 1):
@@ -17,7 +18,18 @@ def copy_folder(source_folder, destination_folder):
             print(f"Le dossier '{destination_folder}' a été créé.")
 
         # Utilisez la fonction shutil.copytree() pour copier le dossier source dans le dossier de destination
-        shutil.copytree(source_folder, destination_folder, dirs_exist_ok=True)
+        files = os.listdir(source_folder)
+        total_files = len(files)
+
+        # Utilisez tqdm pour créer une barre de progression
+        with tqdm(total=total_files, unit='file') as pbar:
+            for file in files:
+                source_file = os.path.join(source_folder, file)
+                destination_file = os.path.join(destination_folder, file)
+                
+                shutil.copy2(source_file, destination_file)
+                pbar.update(1)
+
         print(f"Le dossier '{source_folder}' a été copié dans '{destination_folder}'.")
     except Exception as e:
         print("Une erreur s'est produite lors de la copie du dossier :", str(e))
@@ -52,7 +64,11 @@ sources.append('C:\\Users\\' + username + '\\Downloads\\')
 destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
 # Exécutez le script en tant qu'administrateur avec subprocess
+<<<<<<< HEAD
+script_path = "C:/BackUp/backup.py"
+=======
 script_path = "c:/Python/Python311/Projet Backup/backup.py"
+>>>>>>> cc91fa18ee2ca84f86556a17ae7b6c789340fb64
 subprocess.run(["runas", "/user:Administrator", sys.executable, script_path])
 
 # Lancez la copie des dossiers si l'exécution ci-dessus est en mode administrateur
