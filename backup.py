@@ -6,22 +6,24 @@ import subprocess
 import sys
 from tqdm import tqdm
 
+##Test des Tests workflow2
+
 def start():
     for i in range(len(sources) - 1):
         copy_folder(sources[i], destinations[i])
 
 def copy_folder(source_folder, destination_folder):
     try:
-        # Créez le dossier de destination
+        # Création du dossier de destination
         if not os.path.exists(destination_folder):
             os.makedirs(destination_folder)
             print(f"Le dossier '{destination_folder}' a été créé.")
 
-        # Utilisez la fonction shutil.copytree() pour copier le dossier source dans le dossier de destination
+        # Shutil.copytree() pour copier le dossier source dans le dossier de destination
         files = os.listdir(source_folder)
         total_files = len(files)
 
-        # Utilisez tqdm pour créer une barre de progression
+        #tqdm pour créer une barre de progression
         with tqdm(total=total_files, unit='file') as pbar:
             for file in files:
                 source_file = os.path.join(source_folder, file)
@@ -34,7 +36,7 @@ def copy_folder(source_folder, destination_folder):
     except Exception as e:
         print("Une erreur s'est produite lors de la copie du dossier :", str(e))
 
-# Spécifiez les chemins complets des dossiers source et de destination
+# Avoir le nom d'utilisateur
 username = getpass.getuser()
 sources = []
 destinations = []
