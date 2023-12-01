@@ -41,6 +41,7 @@ username = getpass.getuser()
 sources = []
 destinations = []
 
+
 # Chemins Documents
 sources.append('C:\\Users\\' + username + '\\Documents\\')
 destinations.append('C:\\' + username + '_BackUp\\Documents_' + username + '_Baaackup')
