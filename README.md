@@ -12,7 +12,7 @@ Pour le dévelopement:
  * les dossiers sont copié dans un dossier à la racine de C nommé *username_backup*. 
  * A la ligne 9 ```for i in range(len(sources) - 1):``` le -1 sert à ne pas prendre en compte le dernier élément de la liste pour éviter pour copier tout le dossier téléchargement. 
 
-Vous pouvez modifier les chemins destinations pour vos tests en local mais lorsque vous pushez sur la branche principale il faudra que les chemins soient identique à ceux de la branche main pour facilité la prise en main des autres collaborateurs.  
+**Vous pouvez modifier les chemins destinations pour vos tests en local mais lors d'une PR sur la branche principale il faudra que les chemins soient identique à ceux de la branche main pour faciliter la prise en main des autres collaborateurs. Merci:).**  
 
 Le script restoreBackup.py sert à copier les données de la clef vers les bons dossiers du nouveau poste.
 
