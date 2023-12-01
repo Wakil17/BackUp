@@ -64,11 +64,7 @@ sources.append('C:\\Users\\' + username + '\\Downloads\\')
 destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
 # Exécutez le script en tant qu'administrateur avec subprocess
-<<<<<<< HEAD
-script_path = "C:/BackUp/backup.py"
-=======
 script_path = "c:/Python/Python311/Projet Backup/backup.py"
->>>>>>> cc91fa18ee2ca84f86556a17ae7b6c789340fb64
 subprocess.run(["runas", "/user:Administrator", sys.executable, script_path])
 
 # Lancez la copie des dossiers si l'exécution ci-dessus est en mode administrateur
