@@ -7,7 +7,7 @@ import sys
 
 def start():
     for i in range(len(sources) - 1):
-        copy_folder(sources[i], destinations[i])
+        copy_folder(destinations[i],sources[i])
 
 def copy_folder(source_folder, destination_folder):
     try:
@@ -29,27 +29,27 @@ destinations = []
 
 # Chemins Documents
 sources.append('C:\\Users\\' + username + '\\Documents\\')
-destinations.append('C:\\' + username + '_BackUp\\Documents_' + username + '_Baaackup')
+destinations.append('D:\\' + username + '_BackUp\\Documents_' + username + '_Baaackup')
 
 # Chemin Images
 sources.append('C:\\Users\\' + username + '\\Pictures\\')
-destinations.append('C:\\' + username + '_BackUp\\Images_' + username + '_Backup')
+destinations.append('D:\\' + username + '_BackUp\\Images_' + username + '_Backup')
 
 # Chemin Vidéos
 sources.append('C:\\Users\\' + username + '\\Videos\\')
-destinations.append('C:\\' + username + '_BackUp\\Vidéos_' + username + '_Backup')
+destinations.append('D:\\' + username + '_BackUp\\Vidéos_' + username + '_Backup')
 
 # Chemin Musique
 sources.append('C:\\Users\\' + username + '\\Music\\')
-destinations.append('C:\\' + username + '_BackUp\\Musique_' + username + '_Backup')
+destinations.append('D:\\' + username + '_BackUp\\Musique_' + username + '_Backup')
 
 # Chemins Favoris
 sources.append('C:\\Users\\' + username + '\\Favorites\\')
-destinations.append('C:\\' + username + '_BackUp\\Favoris_' + username + '_Backup')
+destinations.append('D:\\' + username + '_BackUp\\Favoris_' + username + '_Backup')
 
 # Chemin Téléchargements
 sources.append('C:\\Users\\' + username + '\\Downloads\\')
-destinations.append('C:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
+destinations.append('D:\\' + username + '_BackUp\\Téléchargements_' + username + '_Backup')
 
 # Exécutez le script en tant qu'administrateur avec subprocess
 script_path = "c:/Python/Python311/Projet Backup/fonctionnel.py"
