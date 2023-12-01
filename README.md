@@ -29,7 +29,7 @@ Pour pouvoir exécuter les scripts, vous devrez installer Python et saisir la li
 ```
 c:/Python/Python311/python.exe "c:/Python/Python311/Projet Backup/backup.py"
 ```
-### Nouvelle fonctionnalitée
+### Nouvelle fonctionnalité
 
 Ajout d'une barre de progression lors du chargement des fichiers
 Pour qu'elle soit fonctionnelle assurez-vous d'installer tqdm en utilisant la commande ```pip install tqdm```. 
